@@ -1,0 +1,145 @@
+body {
+  min-height: 200%;
+}
+
+/*img.thumbnail {
+  width: 30%;
+  margin: .5%;
+}*/
+
+td.thumbnail {
+  text-align: center;
+  /*width: 17%;*/
+}
+
+td.thumbnail img {
+  width: 100%;
+}
+
+div.hide {
+  margin: 0px;
+  padding: 0px;
+  position:fixed;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  background: black;
+  animation-name: hide;
+  animation-duration: 4s;
+  transform: scale(.5);
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.hide img {
+  width:100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-parent {
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  background: black;
+}
+
+.fade-away {
+  animation-name: hide;
+  animation-duration: 4s;
+  transform: scale(.5);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.center-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:100%;
+}
+
+
+@keyframes hide {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(.5);
+    opacity: 0;
+  }
+}
+
+.video-container {
+  display: inline;
+  cursor: pointer;
+  position: relative;
+}
+
+.time {
+  /*transform: matrix(1, 0, 0, 1, 0, -12);*/
+  border: 0;
+  opacity: .8;
+  position: absolute;
+  background-color: hsl(0, 0%, 6.7%);
+  color: hsl(0, 0%, 100%);
+  letter-spacing: .5px;
+  white-space: normal;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 2px;
+
+  bottom: 8px;
+  right: 4px;
+  display: flex;
+  flex-direction: row;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 12px;
+  margin: 4px;
+  padding: 2px 4px;
+  position: absolute;
+  white-space: normal;
+}
+
+/* force scrollbar to be present */
+html {
+  overflow-y: scroll;
+}
+
+.controls {
+  position:fixed; 
+  left:0px; 
+  bottom:0px; 
+  font-size: 300%; 
+  z-index: 1; 
+  background: white; 
+  opacity: .7;
+}
+
+#player iframe {
+}
+#player {
+	display: none;
+}
+
+table {
+	margin-bottom: 5em;
+}
+
